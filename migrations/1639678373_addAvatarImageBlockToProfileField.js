@@ -3,13 +3,13 @@
 module.exports = async (client) => {
   const avatarBlock = await client.itemTypes.create({
     name: 'Avatar',
-    apiKey: 'avatar',
+    apiKey: 'avatar_block',
     modularBlock: true,
   });
 
   const imageField = await client.fields.create(avatarBlock.id, {
-    label: 'Picture',
-    apiKey: 'picture',
+    label: 'Avatar',
+    apiKey: 'avatar_pic',
     fieldType: 'file',
     validators: {
       extension: {
